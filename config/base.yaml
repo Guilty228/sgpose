@@ -1,0 +1,79 @@
+rd_seed: 1
+n_cls: 6
+resolution: 64
+ds_rate: 2
+mode: epoch
+max_epoch : 150
+num_mini_batch_per_epoch: 5000
+num_patches: 15
+
+backbone:
+  input_dim: 1
+  output_dim: 256
+  init_dim: 64
+  group_norm: 32
+  
+  num_stages: 4
+  init_voxel_size: 0.025
+  kernel_size: 15
+  base_radius: 2.5
+  base_sigma: 2.0
+  init_radius: 0.0625  # base_radius*init_voxel_size  
+  init_sigma: 0.05     # base_sigma*init_voxel_size
+  
+
+optimizer:
+  type : Adam
+  lr   : 0.001
+  betas: [0.5, 0.999]
+  eps  : 0.000001
+  weight_decay: 0
+
+
+lr_scheduler:
+  type: WarmupCosineLR
+  max_iters: 200000
+  warmup_factor: 0.001
+  warmup_iters: 2000
+
+loss:
+  vp_weight: 100.0
+  t_weight: 1.0
+  s_weight: 1.0
+
+train_dataset:
+  data_dir: /root/autodl-tmp/sgpose/data/NOCS
+  sample_num: 2048
+  random_rotate: True
+  angle_range: 20
+  num_stages: 4
+  init_voxel_size: 0.025
+  kernel_size: 15
+  base_radius: 2.5
+  base_sigma: 2.0
+  init_radius: 0.0625  # base_radius*init_voxel_size  
+  init_sigma: 0.05     # base_sigma*init_voxel_size
+
+train_dataloader:
+  bs: 16
+  num_workers: 8
+  shuffle: True
+  drop_last: True
+  pin_memory: False
+
+test:
+  sample_num: 2048
+  data_dir: /root/autodl-tmp/sgpose/data/NOCS
+  random_rotate: True
+  angle_range: 20
+  
+  num_stages: 4
+  init_voxel_size: 0.025
+  kernel_size: 15
+  base_radius: 2.5
+  base_sigma: 2.0
+  init_radius: 0.0625  # base_radius*init_voxel_size  
+  init_sigma: 0.05     # base_sigma*init_voxel_size
+
+per_val: 10
+per_write: 50

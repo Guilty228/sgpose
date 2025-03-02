@@ -1,0 +1,10 @@
+# ninja log v5
+2	19941	1728201284	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/group_points_gpu.o	5b92768daa99e0f4
+1	20153	1728201284	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/ball_query_gpu.o	a197e0f70dd51768
+2	20179	1728201284	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/interpolate_gpu.o	5b6786f74c8cf30f
+3	20540	1728201285	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/sampling_gpu.o	6ab5a80f58ff438e
+0	21185	1728201285	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/ball_query.o	a16a9dfc88bcd51
+1	21256	1728201285	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/bindings.o	8d50a69d9cc13bb6
+2	21301	1728201285	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/group_points.o	938b709568efab67
+2	21656	1728201286	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/interpolate.o	1ab947bdd9875da0
+3	22274	1728201286	/media/robot/8.0TB/zfy/SecondPose/lib/pointnet2/build/temp.linux-x86_64-cpython-39/_ext_src/src/sampling.o	32be72055b5b17dc
